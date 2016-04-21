@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Indian Railways Map</title>
+  <meta name="description" content="Indian Railways Explorer">
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.17.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
+
+
+
+
+  <link href="https://www.mapbox.com/base/latest/base.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+
+<body class='map'>
+  <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+<!-- Content -->
+
+
+  <div class='col12 clearfix'>
+
+  <div id='map' class=''></div>
+
+  <div id='sidebar' class='col3 pad2 dark fill-navy pin-left'>
+
+    <h1 class='fancy'><a href='#'>Indian Railways Explorer
+    </h1>
+
+
+    <p>Explore the world of the Indian Railways</p>
+
+    <div data-map='legend'>
+
+      <!-- <h3>Issues</h3>
+
+      <ul class="keyline-top space-bottom1">
+        <li>
+          <a data-map-layer='osmlint circle selfintersecting'  href="#" class="truncate strong bloxk small active" onclick='mapToggle(this);'>
+              Self Intersecting Ways</a>
+        </li>
+        <li>
+          <a data-map-layer='osmlint circle selfintersecting' href="#" class="truncate strong bloxk small" onclick='mapToggle(this);'>
+              Unclosed Ways</a>
+        </li>
+        <li>
+          <a data-map-layer='osmlint circle selfintersecting' href="#" class="truncate strong bloxk small" onclick='mapToggle(this);'>
+              Bridge on node</a>
+        </li>
+      </ul>
+
+    </div> -->
+
+    <!-- <a href='https://github.com/ruchikavn/indianrailwaymap' class='button short stroke quiet icon alert'>Site has issues..</a> -->
+
+  </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src=js/mapbox-gl-js-common.js></script>
+<script type="text/javascript" src=js/map.js></script>
+
+</body>
+
+</html>
