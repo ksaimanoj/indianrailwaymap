@@ -1,2 +1,2 @@
-# indianrailwaymap
+# indianrailways
 Indian Railway System
