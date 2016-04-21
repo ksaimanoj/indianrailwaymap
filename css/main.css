@@ -13,3 +13,7 @@
   top: 0;
   bottom: 0;
   width: 100%; }
+
+  #sidebar{
+    background:rgba(40, 53, 61, 0.23);
+  }
