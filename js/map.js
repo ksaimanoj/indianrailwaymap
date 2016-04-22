@@ -70,14 +70,28 @@ map.on('style.load', function(e) {
   // Highlight terminating trains on selecting stations
   map.on('click', function (e) {
 
-    var station = map.queryRenderedFeatures(e.point, { layers: ["origins>1"] });
-      if (station.length) {
+    var stations = map.queryRenderedFeatures(e.point, { layers: ["origins>1"] });
+      if (stations.length) {
         // console.log(station[0].properties.code);
         map.setLayoutProperty("Terminating Trains","visibility","visible");
         map.setLayoutProperty("Highlight Station","visibility","visible");
 
-        map.setFilter("Terminating Trains", ["any",["==","from_station_code",station[0].properties.code],["==","to_station_code",station[0].properties.code]]);
-        map.setFilter("Highlight Station", ["==","code",station[0].properties.code]);
+        stationFilter = new Array();
+        stationFilter.push("any");
+
+        stationHighlightFilter = new Array();
+        stationHighlightFilter.push("any");
+
+        for( var i = 0; i < stations.length; i++){
+          stationFilter.push(["==","from_station_code",stations[i].properties.code]);
+          stationFilter.push(["==","to_station_code",stations[i].properties.code]);
+          stationHighlightFilter.push(["==","code",stations[i].properties.code]);
+        }
+
+        map.setFilter("Terminating Trains", stationFilter);
+        map.setFilter("Highlight Station", stationHighlightFilter);
+
+        console.log(stationHighlightFilter);
 
         // terminating_trains = map.querySourceFeatures({ layers: ["trainclasses"], filter: ["==", "from_station_code", "MAS"] });
         // console.log(terminating_trains);
