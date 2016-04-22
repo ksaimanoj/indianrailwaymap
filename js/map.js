@@ -70,7 +70,7 @@ map.on('style.load', function(e) {
   // Highlight terminating trains on selecting stations
   map.on('click', function (e) {
 
-    var stations = map.queryRenderedFeatures(e.point, { layers: ["origins>1"] });
+    var stations = map.queryRenderedFeatures([[e.point.x-3,e.point.y-3],[e.point.x+3,e.point.y+3]], { layers: ["origins>1"] });
       if (stations.length) {
         // console.log(station[0].properties.code);
         map.setLayoutProperty("Terminating Trains","visibility","visible");
