@@ -62,9 +62,34 @@ map.on('style.load', function(e) {
         hide(trainToLayersMap[type].id);
       }
     });
+
     toggle(trainLayerId);
     setInfo(trainType);
   });
+
+  // Highlight terminating trains on selecting stations
+  map.on('click', function (e) {
+
+    var station = map.queryRenderedFeatures(e.point, { layers: ["origins>1"] });
+      if (station.length) {
+        // console.log(station[0].properties.code);
+        map.setLayoutProperty("Terminating Trains","visibility","visible");
+        map.setLayoutProperty("Highlight Station","visibility","visible");
+
+        map.setFilter("Terminating Trains", ["any",["==","from_station_code",station[0].properties.code],["==","to_station_code",station[0].properties.code]]);
+        map.setFilter("Highlight Station", ["==","code",station[0].properties.code]);
+
+        // terminating_trains = map.querySourceFeatures({ layers: ["trainclasses"], filter: ["==", "from_station_code", "MAS"] });
+        // console.log(terminating_trains);
+        // document.getElementById('station-details').innerHTML = JSON.stringify(station[0].properties, null, 2);
+        // map.setFilter("route-hover", ["==", "name", features[0].properties.name]);
+      } else {
+          map.setLayoutProperty("Terminating Trains","visibility","none");
+          map.setLayoutProperty("Highlight Station","visibility","none");
+      }
+
+  })
+
 });
 
 
