@@ -1,8 +1,13 @@
 .map h1,
 .map h1.fancy {
-  font-size: 0.8em;
+  font-size: 1.2em;
   line-height: 1.1em;
   margin-bottom: 0.5em;
+}
+.map h3,
+.map h3.fancy {
+  font-size: 0.8em;
+  line-height: 1.1em;
 }
 .map p.prose {
   font-size: 0.8em;
