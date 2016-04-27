@@ -8,6 +8,7 @@
 .map h3.fancy {
   font-size: 0.8em;
   line-height: 1.1em;
+  margin-bottom: 0.1em;
 }
 .map p.prose {
   font-size: 0.8em;
