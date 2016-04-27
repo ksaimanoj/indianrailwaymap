@@ -13,6 +13,7 @@
 .map p.prose {
   font-size: 0.8em;
   margin-bottom: 0.5em;
+  line-height: 0.9em;
 }
 .map .tagline {
   letter-spacing: inherit;
