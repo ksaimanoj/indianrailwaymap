@@ -4,6 +4,10 @@
   line-height: 1.1em;
   margin-bottom: 0.5em;
 }
+.map p.prose {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
 .map .tagline {
   letter-spacing: inherit;
   display: inline-block;
