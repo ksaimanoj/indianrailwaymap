@@ -17,6 +17,14 @@
   width: 100%;
 }
 
+#mapname {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  color: white;
+  font size: 1.3em;
+}
 #sidebar{
   background:rgba(40, 53, 61, 0.23);
 }
