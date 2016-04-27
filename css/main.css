@@ -3,12 +3,16 @@
   font-size: 1.2em;
   line-height: 1.1em;
   margin-bottom: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
 }
 .map h3,
 .map h3.fancy {
   font-size: 1em;
-  line-height: 1.1em;
-  margin-bottom: 0.1em;
+  line-height: 1.3em;
+  margin-bottom: 0.2em;
 }
 .map p.prose {
   font-size: 0.8em;
