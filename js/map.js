@@ -60,6 +60,8 @@ map.on('style.load', function(e) {
     Object.keys(trainToLayersMap).forEach(function (type) {
       if (type != trainType) {
         hide(trainToLayersMap[type].id);
+        hide(trainToLayersMap[type].title);
+        hide(trainToLayersMap[type].text);
       }
     });
 
