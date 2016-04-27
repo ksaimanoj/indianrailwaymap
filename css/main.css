@@ -7,6 +7,7 @@
   top: 0;
   right: 0;
   text-align: right;
+  z-index: 6;
 }
 .map h3,
 .map h3.fancy {
