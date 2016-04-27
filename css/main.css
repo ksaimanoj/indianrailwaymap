@@ -3,6 +3,14 @@
   font-size: 1.3em;
   line-height: 1.1em;
   margin-bottom: 0.5em;
+  text-align: right;
+}
+#mapname {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  z-index: 4;
 }
 .map .tagline {
   letter-spacing: inherit;
